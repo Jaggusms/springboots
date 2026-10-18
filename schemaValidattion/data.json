@@ -1,0 +1,58 @@
+{
+  "name": "Jagadeesh",
+  "age": 26,
+  "salary": 75000.50,
+  "height": 5.11,
+  "active": true,
+  "middleName": null,
+
+  "address": {
+    "city": "Tirupati",
+    "state": "Andhra Pradesh",
+    "pincode": 517501
+  },
+
+  "skills": [
+    "Java",
+    "Spring Boot",
+    "Kafka"
+  ],
+
+  "marks": [
+    85,
+    90,
+    95
+  ],
+
+  "prices": [
+    100.50,
+    250.75,
+    500.25
+  ],
+
+  "employees": [
+    {
+      "id": 101,
+      "name": "Ravi",
+      "salary": 50000.50
+    },
+    {
+      "id": 102,
+      "name": "Suresh",
+      "salary": 65000.75
+    }
+  ],
+
+  "matrix": [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ],
+
+  "employeeSkills": [
+    ["Java", "Spring"],
+    ["Python", "Django"]
+  ],
+
+  "optionalData": null
+}

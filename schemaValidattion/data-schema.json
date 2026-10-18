@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+
+    "age": {
+      "type": "integer",
+      "minimum": 0
+    },
+
+    "salary": {
+      "type": "number"
+    },
+
+    "height": {
+      "type": "number"
+    },
+
+    "active": {
+      "type": "boolean"
+    },
+
+    "middleName": {
+      "type": "null"
+    },
+
+    "address": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "pincode": {
+          "type": "integer"
+        }
+      },
+      "required": ["city", "state", "pincode"],
+      "additionalProperties": false
+    },
+
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "marks": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+
+    "prices": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+
+    "employees": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "salary": {
+            "type": "number"
+          }
+        },
+        "required": ["id", "name", "salary"],
+        "additionalProperties": false
+      }
+    },
+
+    "matrix": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        }
+      }
+    },
+
+    "employeeSkills": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+
+    "optionalData": {
+      "type": ["string", "null"]
+    }
+  },
+
+  "required": [
+    "name",
+    "age",
+    "salary",
+    "height",
+    "active",
+    "middleName",
+    "address",
+    "skills",
+    "marks",
+    "prices",
+    "employees",
+    "matrix",
+    "employeeSkills",
+    "optionalData"
+  ],
+
+  "additionalProperties": false
+}
