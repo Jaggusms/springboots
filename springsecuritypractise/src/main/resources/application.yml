@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+resilience4j:
+  retry:
+    instances:
+      paymentService:
+        maxAttempts: 3
+        waitDuration: 2s
+        enableExponentialBackoff: false
+        retryExceptions:
+          - java.io.IOException
+
+        #This is rate limint
+        limitForPeriod: 5
+        limitRefreshPeriod: 1s
+        timeoutDuration: 0
+
+        # This is bulkhead
+        maxConcurrentCalls: 5
+        maxWaitDuration: 0
+
+        #circute breacker Pattern..
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 5
+        minimumNumberOfCalls: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 2
+
+
+
+
+spring:
+  datasource:
+    user:
+      url: jdbc:postgresql://localhost:5432/user_db
+      username: postgres
+      password: ${USER_DB_PASSWORD}
+      driver-class-name: org.postgresql.Driver
+
+    order:
+      url: jdbc:postgresql://localhost:5432/order_db
+      username: postgres
+      password: ${ORDER_DB_PASSWORD}
+      driver-class-name: org.postgresql.Driver

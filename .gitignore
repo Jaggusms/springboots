@@ -1,0 +1,16 @@
+springsecuritypractise/target/
+# Maven build output
+target/
+**/target/
+
+# IDE files
+.idea/
+*.iml
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
